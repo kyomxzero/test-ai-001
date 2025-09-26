@@ -1,0 +1,551 @@
+{
+  "config": {
+    "configFile": "D:\\Automate-Cello\\playwright-test\\playwright.config.ts",
+    "rootDir": "D:/Automate-Cello/playwright-test/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "test-suite": "Holiday Calendar Tests",
+      "environment": "SIT",
+      "application": "Billing System",
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results.xml"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Automate-Cello/playwright-test/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "test-suite": "Holiday Calendar Tests",
+          "environment": "SIT",
+          "application": "Billing System",
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Automate-Cello/playwright-test/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 120000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "holidays-calendar-edit.spec.ts",
+      "file": "holidays-calendar-edit.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Holiday Calendar Edit Tests",
+          "file": "holidays-calendar-edit.spec.ts",
+          "line": 12,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TC-02-048_0001: Edit Holiday with complete data and cancel save",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                        "line": 26,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-26T06:24:01.035Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                            "line": 26,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5700483b14ffb04591af-8ca1c20673092262ed9f",
+              "file": "holidays-calendar-edit.spec.ts",
+              "line": 26,
+              "column": 8
+            },
+            {
+              "title": "TC-02-049_0001: Edit Holiday with data entry and confirm back navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                        "line": 114,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-26T06:24:01.036Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                            "line": 114,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5700483b14ffb04591af-cfe447e964b0fbaf4133",
+              "file": "holidays-calendar-edit.spec.ts",
+              "line": 114,
+              "column": 8
+            },
+            {
+              "title": "TC-02-050_0001: Edit Holiday with data entry, back navigation, and cancel exit",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                        "line": 187,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-26T06:24:01.037Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                            "line": 187,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5700483b14ffb04591af-2be4d2751ccf6c126b01",
+              "file": "holidays-calendar-edit.spec.ts",
+              "line": 187,
+              "column": 8
+            },
+            {
+              "title": "TC-02-051_0001: Edit Holiday with data entry but without clicking Add button",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "location": {
+                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                        "line": 281,
+                        "column": 8
+                      }
+                    }
+                  ],
+                  "expectedStatus": "skipped",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "skipped",
+                      "duration": 0,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-26T06:24:01.037Z",
+                      "annotations": [
+                        {
+                          "type": "skip",
+                          "location": {
+                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
+                            "line": 281,
+                            "column": 8
+                          }
+                        }
+                      ],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "skipped"
+                }
+              ],
+              "id": "5700483b14ffb04591af-f920cdb129206907233f",
+              "file": "holidays-calendar-edit.spec.ts",
+              "line": 281,
+              "column": 8
+            },
+            {
+              "title": "TC-02-052_0001: Edit Holiday by deleting holiday data and save",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 42707,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_01_login_page.png\n"
+                        },
+                        {
+                          "text": "✓ Clicked user selection using selector: text=user1\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_02_select_user.png\n"
+                        },
+                        {
+                          "text": "✓ Clicked login button using selector: button:has-text(\"เข้าสู่ระบบ\")\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_03_after_login.png\n"
+                        },
+                        {
+                          "text": "✓ Page loaded successfully\n"
+                        },
+                        {
+                          "text": "✓ Login successful - redirected to home page\n"
+                        },
+                        {
+                          "text": "✓ Clicked Master menu using selector: text=Master\n"
+                        },
+                        {
+                          "text": "✓ Clicked Holidays Calendar Master using selector: text=Holidays Calendar Master\n"
+                        },
+                        {
+                          "text": "✓ Page loaded successfully\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_05_holidays_calendar_page.png\n"
+                        },
+                        {
+                          "text": "✓ Holiday Calendar Master title visible with selector: text=Holidays Calendar Master\n"
+                        },
+                        {
+                          "text": "✓ Verified on Holiday Calendar main page\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_06_edit_page_2026.png\n"
+                        },
+                        {
+                          "text": "✓ Edit Holiday title visible with selector: text=Edit Holidays Calendar\n"
+                        },
+                        {
+                          "text": "✓ Verified on Holiday Calendar edit page\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_02_edit_mode_verified.png\n"
+                        },
+                        {
+                          "text": "✓ Edit Holiday page visible with selector: text=Edit Holidays Calendar\n"
+                        },
+                        {
+                          "text": "✓ Edit Holiday mode verified\n"
+                        },
+                        {
+                          "text": "✓ Holiday selected for deletion: 0\n"
+                        },
+                        {
+                          "text": "✓ Holiday data selected for deletion\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_04-click_delete_button.png\n"
+                        },
+                        {
+                          "text": "⚠ Could not click Delete button. Last error: Unknown error\n"
+                        },
+                        {
+                          "text": "✓ Delete button clicked\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_14_14-no_popup_found.png\n"
+                        },
+                        {
+                          "text": "⚠ No confirmation popup found\n"
+                        },
+                        {
+                          "text": "⚠ VALIDATION 1 WARNING: No delete confirmation popup found\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_15-click_confirm_button.png\n"
+                        },
+                        {
+                          "text": "⚠ Could not click Confirm button. Last error: Unknown error\n"
+                        },
+                        {
+                          "text": "✓ Confirm button clicked\n"
+                        },
+                        {
+                          "text": "✓ Delete confirmed\n"
+                        },
+                        {
+                          "text": "✓ Clicked Save button using selector: button:has-text(\"Save\")\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_13-click_save_button.png\n"
+                        },
+                        {
+                          "text": "✓ Save button clicked\n"
+                        },
+                        {
+                          "text": "✓ Popup found with selector: [role=\"dialog\"]\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_14_14-confirm_popup_displayed.png\n"
+                        },
+                        {
+                          "text": "✓ Confirmation popup found\n"
+                        },
+                        {
+                          "text": "Popup content: Confirm Update Data.Are you sure you want to update this record? Please click Confirm to continue.CancelConfirm\n"
+                        },
+                        {
+                          "text": "✓ VALIDATION 2 PASSED: Save confirmation popup displayed\n"
+                        },
+                        {
+                          "text": "Popup content: Confirm Update Data.Are you sure you want to update this record? Please click Confirm to continue.CancelConfirm\n"
+                        },
+                        {
+                          "text": "✓ Clicked Confirm button using selector: button:has-text(\"Confirm\")\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_15-click_confirm_button.png\n"
+                        },
+                        {
+                          "text": "✓ Confirm button clicked\n"
+                        },
+                        {
+                          "text": "✓ Save confirmed\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_17_save_completed.png\n"
+                        },
+                        {
+                          "text": "✓ VALIDATION 3 PASSED: Holiday data deletion saved successfully\n"
+                        },
+                        {
+                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_18_final_state.png\n"
+                        },
+                        {
+                          "text": "=== TC-02-052 TEST SUMMARY ===\n"
+                        },
+                        {
+                          "text": "Expected Result 1: Delete confirmation popup - Validated\n"
+                        },
+                        {
+                          "text": "Expected Result 2: Save confirmation popup - Validated\n"
+                        },
+                        {
+                          "text": "Expected Result 3: Holiday data deletion saved - Validated\n"
+                        },
+                        {
+                          "text": "✓ TC-02-052 test completed successfully\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "1. เลือก Holiday year ที่ต้องการแก้ไข",
+                          "duration": 22416
+                        },
+                        {
+                          "title": "2. กด Icon Edit Holiday",
+                          "duration": 211
+                        },
+                        {
+                          "title": "3. เลือกข้อมูลวันหยุด ที่ต้องการลบ",
+                          "duration": 259
+                        },
+                        {
+                          "title": "4. กด Icon Delete",
+                          "duration": 2264
+                        },
+                        {
+                          "title": "Validate 1: ตรวจสอบการแสดง pop up confirm การลบข้อมูลวันหยุด",
+                          "duration": 2220
+                        },
+                        {
+                          "title": "5. กด Delete (Confirm)",
+                          "duration": 2270
+                        },
+                        {
+                          "title": "6. กด Save",
+                          "duration": 2397
+                        },
+                        {
+                          "title": "Validate 2: ตรวจสอบการแสดง pop up confirm การบันทึกการแก้ไข",
+                          "duration": 2209
+                        },
+                        {
+                          "title": "7. กด Confirm",
+                          "duration": 2366
+                        },
+                        {
+                          "title": "Validate 3: ตรวจสอบการบันทึกข้อมูล Holiday",
+                          "duration": 5201
+                        },
+                        {
+                          "title": "Final Validation Summary",
+                          "duration": 181
+                        }
+                      ],
+                      "startTime": "2025-09-26T06:24:01.037Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5700483b14ffb04591af-b60c3234e528cde64ae3",
+              "file": "holidays-calendar-edit.spec.ts",
+              "line": 368,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-26T06:23:58.983Z",
+    "duration": 45288.240000000005,
+    "expected": 1,
+    "skipped": 4,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
