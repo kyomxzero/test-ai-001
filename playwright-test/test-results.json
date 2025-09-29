@@ -77,229 +77,21 @@
   },
   "suites": [
     {
-      "title": "holidays-calendar-edit.spec.ts",
-      "file": "holidays-calendar-edit.spec.ts",
+      "title": "holiday_calendar_tests.spec.ts",
+      "file": "holiday_calendar_tests.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Holiday Calendar Edit Tests",
-          "file": "holidays-calendar-edit.spec.ts",
-          "line": 12,
+          "title": "Holiday Calendar Master Tests - All 66 Test Cases",
+          "file": "holiday_calendar_tests.spec.ts",
+          "line": 197,
           "column": 6,
           "specs": [
             {
-              "title": "TC-02-048_0001: Edit Holiday with complete data and cancel save",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                        "line": 26,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-26T06:24:01.035Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                            "line": 26,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "5700483b14ffb04591af-8ca1c20673092262ed9f",
-              "file": "holidays-calendar-edit.spec.ts",
-              "line": 26,
-              "column": 8
-            },
-            {
-              "title": "TC-02-049_0001: Edit Holiday with data entry and confirm back navigation",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                        "line": 114,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-26T06:24:01.036Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                            "line": 114,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "5700483b14ffb04591af-cfe447e964b0fbaf4133",
-              "file": "holidays-calendar-edit.spec.ts",
-              "line": 114,
-              "column": 8
-            },
-            {
-              "title": "TC-02-050_0001: Edit Holiday with data entry, back navigation, and cancel exit",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                        "line": 187,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-26T06:24:01.037Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                            "line": 187,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "5700483b14ffb04591af-2be4d2751ccf6c126b01",
-              "file": "holidays-calendar-edit.spec.ts",
-              "line": 187,
-              "column": 8
-            },
-            {
-              "title": "TC-02-051_0001: Edit Holiday with data entry but without clicking Add button",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [
-                    {
-                      "type": "skip",
-                      "location": {
-                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                        "line": 281,
-                        "column": 8
-                      }
-                    }
-                  ],
-                  "expectedStatus": "skipped",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "skipped",
-                      "duration": 0,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-09-26T06:24:01.037Z",
-                      "annotations": [
-                        {
-                          "type": "skip",
-                          "location": {
-                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holidays-calendar-edit.spec.ts",
-                            "line": 281,
-                            "column": 8
-                          }
-                        }
-                      ],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "skipped"
-                }
-              ],
-              "id": "5700483b14ffb04591af-f920cdb129206907233f",
-              "file": "holidays-calendar-edit.spec.ts",
-              "line": 281,
-              "column": 8
-            },
-            {
-              "title": "TC-02-052_0001: Edit Holiday by deleting holiday data and save",
-              "ok": true,
+              "title": "TC-02-003: Search Holiday by Year equals operator",
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -312,216 +104,129 @@
                     {
                       "workerIndex": 0,
                       "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 42707,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_01_login_page.png\n"
+                      "status": "failed",
+                      "duration": 22940,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:269:32\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:265:5",
+                        "location": {
+                          "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
+                          "column": 32,
+                          "line": 269
                         },
+                        "snippet": "\u001b[0m \u001b[90m 267 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m tableRows\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n \u001b[90m 268 |\u001b[39m         \u001b[36mconst\u001b[39m yearCell \u001b[33m=\u001b[39m tableRows\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'td'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 269 |\u001b[39m         \u001b[36mawait\u001b[39m expect(yearCell)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'2026'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 270 |\u001b[39m       }\n \u001b[90m 271 |\u001b[39m       \u001b[36mawait\u001b[39m helper\u001b[33m.\u001b[39mtakeScreenshot(\u001b[32m'screenshots/TC-02-003/04-verify_results.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 272 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
                         {
-                          "text": "✓ Clicked user selection using selector: text=user1\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_02_select_user.png\n"
-                        },
-                        {
-                          "text": "✓ Clicked login button using selector: button:has-text(\"เข้าสู่ระบบ\")\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_03_after_login.png\n"
-                        },
-                        {
-                          "text": "✓ Page loaded successfully\n"
-                        },
-                        {
-                          "text": "✓ Login successful - redirected to home page\n"
-                        },
-                        {
-                          "text": "✓ Clicked Master menu using selector: text=Master\n"
-                        },
-                        {
-                          "text": "✓ Clicked Holidays Calendar Master using selector: text=Holidays Calendar Master\n"
-                        },
-                        {
-                          "text": "✓ Page loaded successfully\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_05_holidays_calendar_page.png\n"
-                        },
-                        {
-                          "text": "✓ Holiday Calendar Master title visible with selector: text=Holidays Calendar Master\n"
-                        },
-                        {
-                          "text": "✓ Verified on Holiday Calendar main page\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_06_edit_page_2026.png\n"
-                        },
-                        {
-                          "text": "✓ Edit Holiday title visible with selector: text=Edit Holidays Calendar\n"
-                        },
-                        {
-                          "text": "✓ Verified on Holiday Calendar edit page\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_02_edit_mode_verified.png\n"
-                        },
-                        {
-                          "text": "✓ Edit Holiday page visible with selector: text=Edit Holidays Calendar\n"
-                        },
-                        {
-                          "text": "✓ Edit Holiday mode verified\n"
-                        },
-                        {
-                          "text": "✓ Holiday selected for deletion: 0\n"
-                        },
-                        {
-                          "text": "✓ Holiday data selected for deletion\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_04-click_delete_button.png\n"
-                        },
-                        {
-                          "text": "⚠ Could not click Delete button. Last error: Unknown error\n"
-                        },
-                        {
-                          "text": "✓ Delete button clicked\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_14_14-no_popup_found.png\n"
-                        },
-                        {
-                          "text": "⚠ No confirmation popup found\n"
-                        },
-                        {
-                          "text": "⚠ VALIDATION 1 WARNING: No delete confirmation popup found\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_15-click_confirm_button.png\n"
-                        },
-                        {
-                          "text": "⚠ Could not click Confirm button. Last error: Unknown error\n"
-                        },
-                        {
-                          "text": "✓ Confirm button clicked\n"
-                        },
-                        {
-                          "text": "✓ Delete confirmed\n"
-                        },
-                        {
-                          "text": "✓ Clicked Save button using selector: button:has-text(\"Save\")\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_13-click_save_button.png\n"
-                        },
-                        {
-                          "text": "✓ Save button clicked\n"
-                        },
-                        {
-                          "text": "✓ Popup found with selector: [role=\"dialog\"]\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_14_14-confirm_popup_displayed.png\n"
-                        },
-                        {
-                          "text": "✓ Confirmation popup found\n"
-                        },
-                        {
-                          "text": "Popup content: Confirm Update Data.Are you sure you want to update this record? Please click Confirm to continue.CancelConfirm\n"
-                        },
-                        {
-                          "text": "✓ VALIDATION 2 PASSED: Save confirmation popup displayed\n"
-                        },
-                        {
-                          "text": "Popup content: Confirm Update Data.Are you sure you want to update this record? Please click Confirm to continue.CancelConfirm\n"
-                        },
-                        {
-                          "text": "✓ Clicked Confirm button using selector: button:has-text(\"Confirm\")\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_15-click_confirm_button.png\n"
-                        },
-                        {
-                          "text": "✓ Confirm button clicked\n"
-                        },
-                        {
-                          "text": "✓ Save confirmed\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_17_save_completed.png\n"
-                        },
-                        {
-                          "text": "✓ VALIDATION 3 PASSED: Holiday data deletion saved successfully\n"
-                        },
-                        {
-                          "text": "📸 Screenshot saved: screenshots/TC-02-052_0001/TC-02-052_0001_18_final_state.png\n"
-                        },
-                        {
-                          "text": "=== TC-02-052 TEST SUMMARY ===\n"
-                        },
-                        {
-                          "text": "Expected Result 1: Delete confirmation popup - Validated\n"
-                        },
-                        {
-                          "text": "Expected Result 2: Save confirmation popup - Validated\n"
-                        },
-                        {
-                          "text": "Expected Result 3: Holiday data deletion saved - Validated\n"
-                        },
-                        {
-                          "text": "✓ TC-02-052 test completed successfully\n"
+                          "location": {
+                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
+                            "column": 32,
+                            "line": 269
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 267 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m tableRows\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n \u001b[90m 268 |\u001b[39m         \u001b[36mconst\u001b[39m yearCell \u001b[33m=\u001b[39m tableRows\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'td'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 269 |\u001b[39m         \u001b[36mawait\u001b[39m expect(yearCell)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'2026'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 270 |\u001b[39m       }\n \u001b[90m 271 |\u001b[39m       \u001b[36mawait\u001b[39m helper\u001b[33m.\u001b[39mtakeScreenshot(\u001b[32m'screenshots/TC-02-003/04-verify_results.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 272 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:269:32\u001b[22m\n\u001b[2m    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:265:5\u001b[22m"
                         }
                       ],
+                      "stdout": [],
                       "stderr": [],
                       "retry": 0,
                       "steps": [
                         {
-                          "title": "1. เลือก Holiday year ที่ต้องการแก้ไข",
-                          "duration": 22416
+                          "title": "Navigate to Holiday Calendar",
+                          "duration": 2452
                         },
                         {
-                          "title": "2. กด Icon Edit Holiday",
-                          "duration": 211
+                          "title": "Search by Holiday Year equals 2026",
+                          "duration": 3118
                         },
                         {
-                          "title": "3. เลือกข้อมูลวันหยุด ที่ต้องการลบ",
-                          "duration": 259
+                          "title": "Export search results",
+                          "duration": 2250
                         },
                         {
-                          "title": "4. กด Icon Delete",
-                          "duration": 2264
-                        },
-                        {
-                          "title": "Validate 1: ตรวจสอบการแสดง pop up confirm การลบข้อมูลวันหยุด",
-                          "duration": 2220
-                        },
-                        {
-                          "title": "5. กด Delete (Confirm)",
-                          "duration": 2270
-                        },
-                        {
-                          "title": "6. กด Save",
-                          "duration": 2397
-                        },
-                        {
-                          "title": "Validate 2: ตรวจสอบการแสดง pop up confirm การบันทึกการแก้ไข",
-                          "duration": 2209
-                        },
-                        {
-                          "title": "7. กด Confirm",
-                          "duration": 2366
-                        },
-                        {
-                          "title": "Validate 3: ตรวจสอบการบันทึกข้อมูล Holiday",
-                          "duration": 5201
-                        },
-                        {
-                          "title": "Final Validation Summary",
-                          "duration": 181
+                          "title": "Verify search results",
+                          "duration": 10029,
+                          "error": {
+                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n",
+                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:269:32\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:265:5",
+                            "location": {
+                              "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
+                              "column": 32,
+                              "line": 269
+                            },
+                            "snippet": "\u001b[0m \u001b[90m 267 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m tableRows\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n \u001b[90m 268 |\u001b[39m         \u001b[36mconst\u001b[39m yearCell \u001b[33m=\u001b[39m tableRows\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'td'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 269 |\u001b[39m         \u001b[36mawait\u001b[39m expect(yearCell)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'2026'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 270 |\u001b[39m       }\n \u001b[90m 271 |\u001b[39m       \u001b[36mawait\u001b[39m helper\u001b[33m.\u001b[39mtakeScreenshot(\u001b[32m'screenshots/TC-02-003/04-verify_results.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 272 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
+                          }
                         }
                       ],
-                      "startTime": "2025-09-26T06:24:01.037Z",
+                      "startTime": "2025-09-26T11:01:18.257Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "D:\\Automate-Cello\\playwright-test\\test-results\\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "D:\\Automate-Cello\\playwright-test\\test-results\\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "D:\\Automate-Cello\\playwright-test\\test-results\\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
+                        "column": 32,
+                        "line": 269
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "111f9be8816e4d3df0a4-9714a3080643c6086a93",
+              "file": "holiday_calendar_tests.spec.ts",
+              "line": 248,
+              "column": 7
+            },
+            {
+              "title": "TC-02-004: Search Holiday by Year not equals operator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 10638,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Holiday Calendar",
+                          "duration": 1955
+                        },
+                        {
+                          "title": "Search by Holiday Year not equals 2025",
+                          "duration": 3194
+                        },
+                        {
+                          "title": "Export search results",
+                          "duration": 2258
+                        }
+                      ],
+                      "startTime": "2025-09-26T11:01:43.115Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -529,9 +234,201 @@
                   "status": "expected"
                 }
               ],
-              "id": "5700483b14ffb04591af-b60c3234e528cde64ae3",
-              "file": "holidays-calendar-edit.spec.ts",
-              "line": 368,
+              "id": "111f9be8816e4d3df0a4-99b8aff78dba431fcad3",
+              "file": "holiday_calendar_tests.spec.ts",
+              "line": 276,
+              "column": 7
+            },
+            {
+              "title": "TC-02-005: Search Holiday by Year greater than operator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9802,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Holiday Calendar",
+                          "duration": 1707
+                        },
+                        {
+                          "title": "Search by Holiday Year greater than 2024",
+                          "duration": 3077
+                        },
+                        {
+                          "title": "Export search results",
+                          "duration": 2220
+                        }
+                      ],
+                      "startTime": "2025-09-26T11:01:54.027Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "111f9be8816e4d3df0a4-91d6b3b3995c7e459755",
+              "file": "holiday_calendar_tests.spec.ts",
+              "line": 295,
+              "column": 7
+            },
+            {
+              "title": "TC-02-006: Search Holiday by Year less than operator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9909,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Holiday Calendar",
+                          "duration": 1867
+                        },
+                        {
+                          "title": "Search by Holiday Year less than 2026",
+                          "duration": 3056
+                        },
+                        {
+                          "title": "Export search results",
+                          "duration": 2199
+                        }
+                      ],
+                      "startTime": "2025-09-26T11:02:03.853Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "111f9be8816e4d3df0a4-50a7f99b6c8d90b228c3",
+              "file": "holiday_calendar_tests.spec.ts",
+              "line": 314,
+              "column": 7
+            },
+            {
+              "title": "TC-02-007: Search Holiday by Year greater equal operator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 11346,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Holiday Calendar",
+                          "duration": 1558
+                        },
+                        {
+                          "title": "Search by Holiday Year greater than or equal 2025",
+                          "duration": 3089
+                        },
+                        {
+                          "title": "Export search results",
+                          "duration": 2214
+                        }
+                      ],
+                      "startTime": "2025-09-26T11:02:13.785Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "111f9be8816e4d3df0a4-84dd3ec3872a2194ca15",
+              "file": "holiday_calendar_tests.spec.ts",
+              "line": 333,
+              "column": 7
+            },
+            {
+              "title": "TC-02-008: Search Holiday by Year less equal operator",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 9887,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "steps": [
+                        {
+                          "title": "Navigate to Holiday Calendar",
+                          "duration": 1654
+                        },
+                        {
+                          "title": "Search by Holiday Year less than or equal 2025",
+                          "duration": 3083
+                        },
+                        {
+                          "title": "Export search results",
+                          "duration": 2208
+                        }
+                      ],
+                      "startTime": "2025-09-26T11:02:25.153Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "111f9be8816e4d3df0a4-2e0b3e4c1860a30bac31",
+              "file": "holiday_calendar_tests.spec.ts",
+              "line": 352,
               "column": 7
             }
           ]
@@ -541,11 +438,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-26T06:23:58.983Z",
-    "duration": 45288.240000000005,
-    "expected": 1,
-    "skipped": 4,
-    "unexpected": 0,
+    "startTime": "2025-09-26T11:01:17.278Z",
+    "duration": 78111.162,
+    "expected": 5,
+    "skipped": 0,
+    "unexpected": 1,
     "flaky": 0
   }
 }
