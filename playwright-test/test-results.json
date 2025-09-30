@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\Automate-Cello\\playwright-test\\playwright.config.ts",
-    "rootDir": "D:/Automate-Cello/playwright-test/tests",
+    "configFile": "D:\\ai-auto-git\\playwright-test\\playwright.config.ts",
+    "rootDir": "D:/ai-auto-git/playwright-test/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -49,7 +49,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "D:/Automate-Cello/playwright-test/test-results",
+        "outputDir": "D:/ai-auto-git/playwright-test/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -60,7 +60,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "D:/Automate-Cello/playwright-test/tests",
+        "testDir": "D:/ai-auto-git/playwright-test/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -90,156 +90,6 @@
           "column": 6,
           "specs": [
             {
-              "title": "TC-02-003: Search Holiday by Year equals operator",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "parallelIndex": 0,
-                      "status": "failed",
-                      "duration": 22940,
-                      "error": {
-                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n",
-                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:269:32\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:265:5",
-                        "location": {
-                          "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
-                          "column": 32,
-                          "line": 269
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 267 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m tableRows\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n \u001b[90m 268 |\u001b[39m         \u001b[36mconst\u001b[39m yearCell \u001b[33m=\u001b[39m tableRows\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'td'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 269 |\u001b[39m         \u001b[36mawait\u001b[39m expect(yearCell)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'2026'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 270 |\u001b[39m       }\n \u001b[90m 271 |\u001b[39m       \u001b[36mawait\u001b[39m helper\u001b[33m.\u001b[39mtakeScreenshot(\u001b[32m'screenshots/TC-02-003/04-verify_results.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 272 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
-                            "column": 32,
-                            "line": 269
-                          },
-                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 267 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m tableRows\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n \u001b[90m 268 |\u001b[39m         \u001b[36mconst\u001b[39m yearCell \u001b[33m=\u001b[39m tableRows\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'td'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 269 |\u001b[39m         \u001b[36mawait\u001b[39m expect(yearCell)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'2026'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 270 |\u001b[39m       }\n \u001b[90m 271 |\u001b[39m       \u001b[36mawait\u001b[39m helper\u001b[33m.\u001b[39mtakeScreenshot(\u001b[32m'screenshots/TC-02-003/04-verify_results.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 272 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:269:32\u001b[22m\n\u001b[2m    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:265:5\u001b[22m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Navigate to Holiday Calendar",
-                          "duration": 2452
-                        },
-                        {
-                          "title": "Search by Holiday Year equals 2026",
-                          "duration": 3118
-                        },
-                        {
-                          "title": "Export search results",
-                          "duration": 2250
-                        },
-                        {
-                          "title": "Verify search results",
-                          "duration": 10029,
-                          "error": {
-                            "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n",
-                            "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: locator('table tbody tr').first().locator('td').nth(1)\nExpected string: \u001b[32m\"2026\"\u001b[39m\nReceived string: \u001b[31m\"Holidays Year\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for locator('table tbody tr').first().locator('td').nth(1)\u001b[22m\n\u001b[2m    14 × locator resolved to <td>…</td>\u001b[22m\n\u001b[2m       - unexpected value \"Holidays Year\"\u001b[22m\n\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:269:32\n    at D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts:265:5",
-                            "location": {
-                              "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
-                              "column": 32,
-                              "line": 269
-                            },
-                            "snippet": "\u001b[0m \u001b[90m 267 |\u001b[39m       \u001b[36mif\u001b[39m (\u001b[36mawait\u001b[39m tableRows\u001b[33m.\u001b[39mcount() \u001b[33m>\u001b[39m \u001b[35m0\u001b[39m) {\n \u001b[90m 268 |\u001b[39m         \u001b[36mconst\u001b[39m yearCell \u001b[33m=\u001b[39m tableRows\u001b[33m.\u001b[39mfirst()\u001b[33m.\u001b[39mlocator(\u001b[32m'td'\u001b[39m)\u001b[33m.\u001b[39mnth(\u001b[35m1\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 269 |\u001b[39m         \u001b[36mawait\u001b[39m expect(yearCell)\u001b[33m.\u001b[39mtoContainText(\u001b[32m'2026'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 270 |\u001b[39m       }\n \u001b[90m 271 |\u001b[39m       \u001b[36mawait\u001b[39m helper\u001b[33m.\u001b[39mtakeScreenshot(\u001b[32m'screenshots/TC-02-003/04-verify_results.png'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 272 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
-                          }
-                        }
-                      ],
-                      "startTime": "2025-09-26T11:01:18.257Z",
-                      "annotations": [],
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "D:\\Automate-Cello\\playwright-test\\test-results\\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\\test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "D:\\Automate-Cello\\playwright-test\\test-results\\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\\video.webm"
-                        },
-                        {
-                          "name": "error-context",
-                          "contentType": "text/markdown",
-                          "path": "D:\\Automate-Cello\\playwright-test\\test-results\\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\\error-context.md"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "D:\\Automate-Cello\\playwright-test\\tests\\holiday_calendar_tests.spec.ts",
-                        "column": 32,
-                        "line": 269
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "111f9be8816e4d3df0a4-9714a3080643c6086a93",
-              "file": "holiday_calendar_tests.spec.ts",
-              "line": 248,
-              "column": 7
-            },
-            {
-              "title": "TC-02-004: Search Holiday by Year not equals operator",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 10638,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Navigate to Holiday Calendar",
-                          "duration": 1955
-                        },
-                        {
-                          "title": "Search by Holiday Year not equals 2025",
-                          "duration": 3194
-                        },
-                        {
-                          "title": "Export search results",
-                          "duration": 2258
-                        }
-                      ],
-                      "startTime": "2025-09-26T11:01:43.115Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "111f9be8816e4d3df0a4-99b8aff78dba431fcad3",
-              "file": "holiday_calendar_tests.spec.ts",
-              "line": 276,
-              "column": 7
-            },
-            {
               "title": "TC-02-005: Search Holiday by Year greater than operator",
               "ok": true,
               "tags": [],
@@ -252,10 +102,10 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 1,
+                      "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 9802,
+                      "duration": 10958,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
@@ -263,18 +113,18 @@
                       "steps": [
                         {
                           "title": "Navigate to Holiday Calendar",
-                          "duration": 1707
+                          "duration": 1712
                         },
                         {
                           "title": "Search by Holiday Year greater than 2024",
-                          "duration": 3077
+                          "duration": 3172
                         },
                         {
                           "title": "Export search results",
-                          "duration": 2220
+                          "duration": 2240
                         }
                       ],
-                      "startTime": "2025-09-26T11:01:54.027Z",
+                      "startTime": "2025-09-30T03:56:24.050Z",
                       "annotations": [],
                       "attachments": []
                     }
@@ -286,150 +136,6 @@
               "file": "holiday_calendar_tests.spec.ts",
               "line": 295,
               "column": 7
-            },
-            {
-              "title": "TC-02-006: Search Holiday by Year less than operator",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9909,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Navigate to Holiday Calendar",
-                          "duration": 1867
-                        },
-                        {
-                          "title": "Search by Holiday Year less than 2026",
-                          "duration": 3056
-                        },
-                        {
-                          "title": "Export search results",
-                          "duration": 2199
-                        }
-                      ],
-                      "startTime": "2025-09-26T11:02:03.853Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "111f9be8816e4d3df0a4-50a7f99b6c8d90b228c3",
-              "file": "holiday_calendar_tests.spec.ts",
-              "line": 314,
-              "column": 7
-            },
-            {
-              "title": "TC-02-007: Search Holiday by Year greater equal operator",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 11346,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Navigate to Holiday Calendar",
-                          "duration": 1558
-                        },
-                        {
-                          "title": "Search by Holiday Year greater than or equal 2025",
-                          "duration": 3089
-                        },
-                        {
-                          "title": "Export search results",
-                          "duration": 2214
-                        }
-                      ],
-                      "startTime": "2025-09-26T11:02:13.785Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "111f9be8816e4d3df0a4-84dd3ec3872a2194ca15",
-              "file": "holiday_calendar_tests.spec.ts",
-              "line": 333,
-              "column": 7
-            },
-            {
-              "title": "TC-02-008: Search Holiday by Year less equal operator",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 120000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 1,
-                      "parallelIndex": 0,
-                      "status": "passed",
-                      "duration": 9887,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "steps": [
-                        {
-                          "title": "Navigate to Holiday Calendar",
-                          "duration": 1654
-                        },
-                        {
-                          "title": "Search by Holiday Year less than or equal 2025",
-                          "duration": 3083
-                        },
-                        {
-                          "title": "Export search results",
-                          "duration": 2208
-                        }
-                      ],
-                      "startTime": "2025-09-26T11:02:25.153Z",
-                      "annotations": [],
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "111f9be8816e4d3df0a4-2e0b3e4c1860a30bac31",
-              "file": "holiday_calendar_tests.spec.ts",
-              "line": 352,
-              "column": 7
             }
           ]
         }
@@ -438,11 +144,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-26T11:01:17.278Z",
-    "duration": 78111.162,
-    "expected": 5,
+    "startTime": "2025-09-30T03:56:23.129Z",
+    "duration": 12518.67,
+    "expected": 1,
     "skipped": 0,
-    "unexpected": 1,
+    "unexpected": 0,
     "flaky": 0
   }
 }

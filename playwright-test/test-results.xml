@@ -1,63 +1,6 @@
-<testsuites id="" name="" tests="6" failures="1" skipped="0" errors="0" time="78.111162">
-<testsuite name="holiday_calendar_tests.spec.ts" timestamp="2025-09-26T11:01:17.416Z" hostname="chromium" tests="6" failures="1" skipped="0" time="74.522" errors="0">
-<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-003: Search Holiday by Year equals operator" classname="holiday_calendar_tests.spec.ts" time="22.94">
-<failure message="holiday_calendar_tests.spec.ts:248:7 TC-02-003: Search Holiday by Year equals operator" type="FAILURE">
-<![CDATA[  [chromium] › holiday_calendar_tests.spec.ts:248:7 › Holiday Calendar Master Tests - All 66 Test Cases › TC-02-003: Search Holiday by Year equals operator › Verify search results 
-
-    Error: expect(locator).toContainText(expected) failed
-
-    Locator: locator('table tbody tr').first().locator('td').nth(1)
-    Expected string: "2026"
-    Received string: "Holidays Year"
-    Timeout: 10000ms
-
-    Call log:
-      - Expect "toContainText" with timeout 10000ms
-      - waiting for locator('table tbody tr').first().locator('td').nth(1)
-        14 × locator resolved to <td>…</td>
-           - unexpected value "Holidays Year"
-
-
-      267 |       if (await tableRows.count() > 0) {
-      268 |         const yearCell = tableRows.first().locator('td').nth(1);
-    > 269 |         await expect(yearCell).toContainText('2026');
-          |                                ^
-      270 |       }
-      271 |       await helper.takeScreenshot('screenshots/TC-02-003/04-verify_results.png');
-      272 |     });
-        at D:\Automate-Cello\playwright-test\tests\holiday_calendar_tests.spec.ts:269:32
-        at D:\Automate-Cello\playwright-test\tests\holiday_calendar_tests.spec.ts:265:5
-
-    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
-    ..\test-results\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\test-failed-1.png
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
-    ..\test-results\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\video.webm
-    ────────────────────────────────────────────────────────────────────────────────────────────────
-
-    Error Context: ..\test-results\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\error-context.md
-]]>
-</failure>
-<system-out>
-<![CDATA[
-[[ATTACHMENT|test-results\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\test-failed-1.png]]
-
-[[ATTACHMENT|test-results\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\video.webm]]
-
-[[ATTACHMENT|test-results\holiday_calendar_tests-Hol-3b030-day-by-Year-equals-operator-chromium\error-context.md]]
-]]>
-</system-out>
-</testcase>
-<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-004: Search Holiday by Year not equals operator" classname="holiday_calendar_tests.spec.ts" time="10.638">
-</testcase>
-<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-005: Search Holiday by Year greater than operator" classname="holiday_calendar_tests.spec.ts" time="9.802">
-</testcase>
-<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-006: Search Holiday by Year less than operator" classname="holiday_calendar_tests.spec.ts" time="9.909">
-</testcase>
-<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-007: Search Holiday by Year greater equal operator" classname="holiday_calendar_tests.spec.ts" time="11.346">
-</testcase>
-<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-008: Search Holiday by Year less equal operator" classname="holiday_calendar_tests.spec.ts" time="9.887">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="12.51867">
+<testsuite name="holiday_calendar_tests.spec.ts" timestamp="2025-09-30T03:56:23.241Z" hostname="chromium" tests="1" failures="0" skipped="0" time="10.958" errors="0">
+<testcase name="Holiday Calendar Master Tests - All 66 Test Cases › TC-02-005: Search Holiday by Year greater than operator" classname="holiday_calendar_tests.spec.ts" time="10.958">
 </testcase>
 </testsuite>
 </testsuites>
