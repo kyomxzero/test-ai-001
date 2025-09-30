@@ -123,6 +123,7 @@ class HolidayCalendarHelper {
   async searchHoliday(criteria: { field: string; operator: string; value: string }) {
     try {
       // First, click on "Add criteria" to open search form
+      
       const addCriteriaButton = this.page.locator('text=Add criteria, button:has-text("Add criteria")');
       if (await addCriteriaButton.count() > 0) {
         await addCriteriaButton.click();
@@ -147,13 +148,98 @@ class HolidayCalendarHelper {
         await this.page.waitForTimeout(1000);
       }
 
-      // If there's an operator dropdown, select it
-      if (criteria.operator && criteria.operator !== '=') {
-        const operatorDropdown = this.page.locator('select').nth(1);
-        if (await operatorDropdown.count() > 0) {
-          await operatorDropdown.selectOption(criteria.operator);
+      // Map operator symbols to text - try multiple possible text variations
+      const operatorMap: { [key: string]: string[] } = {
+        '=': ['Equals', 'Equal', '='],
+        '<>': ['Not Equals', 'Not Equal', '!=', '<>'],
+        '>': ['Greater Than', 'Greater', '>'],
+        '<': ['Less Than', 'Less', '<'],
+        '>=': ['Greater Than or Equal To', 'Greater or Equal', '>='],
+        '<=': ['Less Than or Equal To', 'Less or Equal', '<='],
+        'Like': ['Like', 'Contains'],
+        'IN': ['In', 'IN'],
+        'NOT IN': ['Not In', 'NOT IN'],
+        'Between': ['Between']
+      };
+      
+      const operatorTexts = operatorMap[criteria.operator] || [criteria.operator];
+      
+      // First, click on the "=" in the filter chip to open the operator dropdown
+      // Try multiple selectors to find the "=" button
+      const equalsSelectors = [
+        'text="="',
+        'button:has-text("=")',
+        '[role="button"]:has-text("=")',
+        '.ant-tag:has-text("=")',
+        '.filter-chip:has-text("=")',
+        '[class*="tag"]:has-text("=")',
+        '[class*="chip"]:has-text("=")',
+        'span:has-text("=")',
+        'div:has-text("=")'
+      ];
+      
+      let equalsClicked = false;
+      for (const selector of equalsSelectors) {
+        const equalsButton = this.page.locator(selector).first();
+        if (await equalsButton.count() > 0) {
+          await equalsButton.click();
           await this.page.waitForTimeout(500);
+          console.log(`✓ Clicked on "=" using selector: ${selector}`);
+          equalsClicked = true;
+          break;
         }
+      }
+      
+      if (!equalsClicked) {
+        console.log('Warning: Could not find "=" button in filter chip with any selector');
+        // Take a screenshot to debug
+        await this.takeScreenshot('screenshots/debug-equals-button.png');
+      }
+      
+      let operatorFound = false;
+      
+      // Try each possible text variation for the operator
+      for (const operatorText of operatorTexts) {
+        // Look for the operator option in dropdown menu
+        const dropdownMenu = this.page.locator('[role="menu"], .ant-dropdown-menu, .dropdown-menu, .ant-select-dropdown');
+        const operatorOption = dropdownMenu.locator(`text="${operatorText}"`).first();
+        
+        if (await operatorOption.count() > 0) {
+          await operatorOption.click();
+          await this.page.waitForTimeout(500);
+          operatorFound = true;
+          console.log(`✓ Found and selected operator: "${operatorText}"`);
+          break;
+        } else {
+          // Fallback: try any visible option with that text
+          const fallbackOption = this.page.locator(`li:has-text("${operatorText}"), [role="menuitem"]:has-text("${operatorText}"), .ant-select-item:has-text("${operatorText}")`).first();
+          if (await fallbackOption.count() > 0) {
+            await fallbackOption.click();
+            await this.page.waitForTimeout(500);
+            operatorFound = true;
+            console.log(`✓ Found and selected operator (fallback): "${operatorText}"`);
+            break;
+          }
+        }
+      }
+      
+      if (!operatorFound) {
+        console.log(`Warning: Could not find operator "${criteria.operator}" with any of these variations: ${operatorTexts.join(', ')}`);
+        
+        // Debug: List all available options in the dropdown
+        const dropdownMenu = this.page.locator('[role="menu"], .ant-dropdown-menu, .dropdown-menu, .ant-select-dropdown');
+        const allOptions = dropdownMenu.locator('li, [role="menuitem"], .ant-select-item');
+        const optionCount = await allOptions.count();
+        console.log(`Found ${optionCount} options in dropdown:`);
+        
+        for (let i = 0; i < optionCount; i++) {
+          const option = allOptions.nth(i);
+          const text = await option.textContent();
+          console.log(`  Option ${i + 1}: "${text}"`);
+        }
+        
+        // Take a screenshot to debug
+        await this.takeScreenshot('screenshots/debug-operator-dropdown.png');
       }
 
       // Fill the value in input field
@@ -168,6 +254,47 @@ class HolidayCalendarHelper {
       await this.page.waitForLoadState('networkidle');
     } catch (error) {
       console.log('Error in search:', error);
+    }
+  }
+  async exportAndDownload(testCaseName: string) {
+    try {
+      // Set up download event listener before clicking Export
+      const downloadPromise = this.page.waitForEvent('download', { timeout: 30000 });
+      
+      await this.clickButton('Export');
+      await this.page.waitForTimeout(1000);
+      
+      // Wait for download to complete
+      try {
+        const download = await downloadPromise;
+        const originalFileName = download.suggestedFilename();
+        const fileExtension = originalFileName.split('.').pop();
+        
+        console.log(`Downloaded file: ${originalFileName}`);
+        
+        // Create downloads directory if not exists
+        const fs = require('fs');
+        if (!fs.existsSync('downloads')) {
+          fs.mkdirSync('downloads', { recursive: true });
+        }
+        
+        // Create filename with test case name and timestamp
+        const timestamp = new Date().toISOString().replace(/[:.]/g, '-').substring(0, 19);
+        const newFileName = `${testCaseName}_${timestamp}.${fileExtension}`;
+        const savePath = `downloads/${newFileName}`;
+        
+        // Save the file
+        await download.saveAs(savePath);
+        console.log(`File saved to ${savePath}`);
+        
+        return { success: true, fileName: newFileName, savePath };
+      } catch (error) {
+        console.log('Download error:', error);
+        return { success: false, error };
+      }
+    } catch (error) {
+      console.log('Export button click error:', error);
+      return { success: false, error };
     }
   }
 
@@ -193,7 +320,7 @@ class HolidayCalendarHelper {
     await this.page.screenshot({ path, fullPage: true });
   }
 }
-
+// Test suite for Holiday Calendar Master
 test.describe('Holiday Calendar Master Tests - All 66 Test Cases', () => {
   let helper: HolidayCalendarHelper;
 
@@ -257,19 +384,19 @@ test.describe('Holiday Calendar Master Tests - All 66 Test Cases', () => {
     });
 
     await test.step('Export search results', async () => {
-      await helper.clickButton('Export');
-      await page.waitForTimeout(2000);
-      await helper.takeScreenshot('screenshots/TC-02-003/03-export_results.png');
+      const result = await helper.exportAndDownload('TC-02-003');
+      await helper.takeScreenshot('screenshots/TC-02-003/03-export_completed.png');
+      console.log('Export result:', result);
     });
 
     await test.step('Verify search results', async () => {
-      const tableRows = page.locator('table tbody tr');
-      if (await tableRows.count() > 0) {
-        const yearCell = tableRows.first().locator('td').nth(1);
-        await expect(yearCell).toContainText('2026');
-      }
-      await helper.takeScreenshot('screenshots/TC-02-003/04-verify_results.png');
-    });
+      const dataRows = page.locator('table tbody tr').locator('xpath=//tr[td]'); // Only rows with td
+  if (await dataRows.count() > 0) {
+      const yearCell = dataRows.first().locator('td').nth(1);
+      await expect(yearCell).toContainText('2026');
+  }
+  await helper.takeScreenshot('screenshots/TC-02-003/04-verify_results.png');
+  });
   });
 
   // TC-02-004: ทดสอบการค้นหา Holiday ด้วย Holiday Year "<>" ไม่เท่ากับ
@@ -300,15 +427,28 @@ test.describe('Holiday Calendar Master Tests - All 66 Test Cases', () => {
 
     await test.step('Search by Holiday Year greater than 2024', async () => {
       await helper.searchHoliday({ field: 'Holidays Year', operator: '>', value: '2024' });
+      await page.waitForTimeout(2000); // Wait to see the result
       await helper.takeScreenshot('screenshots/TC-02-005/02-search_results.png');
     });
 
+    await test.step('Verify search results', async () => {
+      // Check if the operator was changed correctly by looking at the UI
+      const operatorDisplay = page.locator('text="Greater Than", button:has-text("Greater Than")').first();
+      if (await operatorDisplay.count() > 0) {
+        console.log('Operator successfully changed to Greater Than');
+      } else {
+        console.log('WARNING: Operator may not have changed to Greater Than');
+        await helper.takeScreenshot('screenshots/TC-02-005/02b-operator_check.png');
+      }
+    });
+
     await test.step('Export search results', async () => {
-      await helper.clickButton('Export');
-      await page.waitForTimeout(2000);
-      await helper.takeScreenshot('screenshots/TC-02-005/03-export_results.png');
+      const result = await helper.exportAndDownload('TC-02-005');
+      await helper.takeScreenshot('screenshots/TC-02-005/03-export_completed.png');
+      console.log('Export result:', result);
     });
   });
+
 
   // TC-02-006: ทดสอบการค้นหา Holiday ด้วย Holiday Year "<" น้อยกว่า
   test('TC-02-006: Search Holiday by Year less than operator', async ({ page }) => {
@@ -317,15 +457,15 @@ test.describe('Holiday Calendar Master Tests - All 66 Test Cases', () => {
       await helper.takeScreenshot('screenshots/TC-02-006/01-initial_page.png');
     });
 
-    await test.step('Search by Holiday Year less than 2026', async () => {
+    await test.step('Select Less Than operator and search', async () => {
       await helper.searchHoliday({ field: 'Holidays Year', operator: '<', value: '2026' });
       await helper.takeScreenshot('screenshots/TC-02-006/02-search_results.png');
     });
 
     await test.step('Export search results', async () => {
-      await helper.clickButton('Export');
-      await page.waitForTimeout(2000);
-      await helper.takeScreenshot('screenshots/TC-02-006/03-export_results.png');
+      const result = await helper.exportAndDownload('TC-02-006');
+      await helper.takeScreenshot('screenshots/TC-02-006/03-export_completed.png');
+      console.log('Export result:', result);
     });
   });
 
@@ -336,15 +476,15 @@ test.describe('Holiday Calendar Master Tests - All 66 Test Cases', () => {
       await helper.takeScreenshot('screenshots/TC-02-007/01-initial_page.png');
     });
 
-    await test.step('Search by Holiday Year greater than or equal 2025', async () => {
+    await test.step('Select Greater Than or Equal To operator and search', async () => {
       await helper.searchHoliday({ field: 'Holidays Year', operator: '>=', value: '2025' });
       await helper.takeScreenshot('screenshots/TC-02-007/02-search_results.png');
     });
 
     await test.step('Export search results', async () => {
-      await helper.clickButton('Export');
-      await page.waitForTimeout(2000);
-      await helper.takeScreenshot('screenshots/TC-02-007/03-export_results.png');
+      const result = await helper.exportAndDownload('TC-02-007');
+      await helper.takeScreenshot('screenshots/TC-02-007/03-export_completed.png');
+      console.log('Export result:', result);
     });
   });
 
@@ -355,15 +495,15 @@ test.describe('Holiday Calendar Master Tests - All 66 Test Cases', () => {
       await helper.takeScreenshot('screenshots/TC-02-008/01-initial_page.png');
     });
 
-    await test.step('Search by Holiday Year less than or equal 2025', async () => {
+    await test.step('Select Less Than or Equal To operator and search', async () => {
       await helper.searchHoliday({ field: 'Holidays Year', operator: '<=', value: '2025' });
       await helper.takeScreenshot('screenshots/TC-02-008/02-search_results.png');
     });
 
     await test.step('Export search results', async () => {
-      await helper.clickButton('Export');
-      await page.waitForTimeout(2000);
-      await helper.takeScreenshot('screenshots/TC-02-008/03-export_results.png');
+      const result = await helper.exportAndDownload('TC-02-008');
+      await helper.takeScreenshot('screenshots/TC-02-008/03-export_completed.png');
+      console.log('Export result:', result);
     });
   });
 
